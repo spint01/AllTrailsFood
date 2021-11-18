@@ -1,0 +1,592 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CDA410B42745E7F900A398FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA410B32745E7F900A398FE /* AppDelegate.swift */; };
+		CDA410B62745E7F900A398FE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA410B52745E7F900A398FE /* SceneDelegate.swift */; };
+		CDA410B82745E7F900A398FE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA410B72745E7F900A398FE /* ViewController.swift */; };
+		CDA410BB2745E7F900A398FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDA410B92745E7F900A398FE /* Main.storyboard */; };
+		CDA410BD2745E7FC00A398FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDA410BC2745E7FC00A398FE /* Assets.xcassets */; };
+		CDA410C02745E7FC00A398FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDA410BE2745E7FC00A398FE /* LaunchScreen.storyboard */; };
+		CDA410CB2745E7FC00A398FE /* AllTrailsFoodTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA410CA2745E7FC00A398FE /* AllTrailsFoodTests.swift */; };
+		CDA410D62745E7FC00A398FE /* AllTrailsFoodUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA410D52745E7FC00A398FE /* AllTrailsFoodUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CDA410C72745E7FC00A398FE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CDA410A82745E7F900A398FE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CDA410AF2745E7F900A398FE;
+			remoteInfo = AllTrailsFood;
+		};
+		CDA410D22745E7FC00A398FE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CDA410A82745E7F900A398FE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CDA410AF2745E7F900A398FE;
+			remoteInfo = AllTrailsFood;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CDA410B02745E7F900A398FE /* AllTrailsFood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AllTrailsFood.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDA410B32745E7F900A398FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CDA410B52745E7F900A398FE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		CDA410B72745E7F900A398FE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CDA410BA2745E7F900A398FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CDA410BC2745E7FC00A398FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CDA410BF2745E7FC00A398FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CDA410C12745E7FC00A398FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CDA410C62745E7FC00A398FE /* AllTrailsFoodTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AllTrailsFoodTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDA410CA2745E7FC00A398FE /* AllTrailsFoodTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllTrailsFoodTests.swift; sourceTree = "<group>"; };
+		CDA410CC2745E7FC00A398FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CDA410D12745E7FC00A398FE /* AllTrailsFoodUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AllTrailsFoodUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CDA410D52745E7FC00A398FE /* AllTrailsFoodUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllTrailsFoodUITests.swift; sourceTree = "<group>"; };
+		CDA410D72745E7FC00A398FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CDA410AD2745E7F900A398FE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CDA410C32745E7FC00A398FE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CDA410CE2745E7FC00A398FE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CDA410A72745E7F900A398FE = {
+			isa = PBXGroup;
+			children = (
+				CDA410B22745E7F900A398FE /* AllTrailsFood */,
+				CDA410C92745E7FC00A398FE /* AllTrailsFoodTests */,
+				CDA410D42745E7FC00A398FE /* AllTrailsFoodUITests */,
+				CDA410B12745E7F900A398FE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CDA410B12745E7F900A398FE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CDA410B02745E7F900A398FE /* AllTrailsFood.app */,
+				CDA410C62745E7FC00A398FE /* AllTrailsFoodTests.xctest */,
+				CDA410D12745E7FC00A398FE /* AllTrailsFoodUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CDA410B22745E7F900A398FE /* AllTrailsFood */ = {
+			isa = PBXGroup;
+			children = (
+				CDA410B32745E7F900A398FE /* AppDelegate.swift */,
+				CDA410B52745E7F900A398FE /* SceneDelegate.swift */,
+				CDA410B72745E7F900A398FE /* ViewController.swift */,
+				CDA410B92745E7F900A398FE /* Main.storyboard */,
+				CDA410BC2745E7FC00A398FE /* Assets.xcassets */,
+				CDA410BE2745E7FC00A398FE /* LaunchScreen.storyboard */,
+				CDA410C12745E7FC00A398FE /* Info.plist */,
+			);
+			path = AllTrailsFood;
+			sourceTree = "<group>";
+		};
+		CDA410C92745E7FC00A398FE /* AllTrailsFoodTests */ = {
+			isa = PBXGroup;
+			children = (
+				CDA410CA2745E7FC00A398FE /* AllTrailsFoodTests.swift */,
+				CDA410CC2745E7FC00A398FE /* Info.plist */,
+			);
+			path = AllTrailsFoodTests;
+			sourceTree = "<group>";
+		};
+		CDA410D42745E7FC00A398FE /* AllTrailsFoodUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CDA410D52745E7FC00A398FE /* AllTrailsFoodUITests.swift */,
+				CDA410D72745E7FC00A398FE /* Info.plist */,
+			);
+			path = AllTrailsFoodUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CDA410AF2745E7F900A398FE /* AllTrailsFood */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CDA410DA2745E7FC00A398FE /* Build configuration list for PBXNativeTarget "AllTrailsFood" */;
+			buildPhases = (
+				CDA410AC2745E7F900A398FE /* Sources */,
+				CDA410AD2745E7F900A398FE /* Frameworks */,
+				CDA410AE2745E7F900A398FE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AllTrailsFood;
+			productName = AllTrailsFood;
+			productReference = CDA410B02745E7F900A398FE /* AllTrailsFood.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CDA410C52745E7FC00A398FE /* AllTrailsFoodTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CDA410DD2745E7FC00A398FE /* Build configuration list for PBXNativeTarget "AllTrailsFoodTests" */;
+			buildPhases = (
+				CDA410C22745E7FC00A398FE /* Sources */,
+				CDA410C32745E7FC00A398FE /* Frameworks */,
+				CDA410C42745E7FC00A398FE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CDA410C82745E7FC00A398FE /* PBXTargetDependency */,
+			);
+			name = AllTrailsFoodTests;
+			productName = AllTrailsFoodTests;
+			productReference = CDA410C62745E7FC00A398FE /* AllTrailsFoodTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CDA410D02745E7FC00A398FE /* AllTrailsFoodUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CDA410E02745E7FC00A398FE /* Build configuration list for PBXNativeTarget "AllTrailsFoodUITests" */;
+			buildPhases = (
+				CDA410CD2745E7FC00A398FE /* Sources */,
+				CDA410CE2745E7FC00A398FE /* Frameworks */,
+				CDA410CF2745E7FC00A398FE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CDA410D32745E7FC00A398FE /* PBXTargetDependency */,
+			);
+			name = AllTrailsFoodUITests;
+			productName = AllTrailsFoodUITests;
+			productReference = CDA410D12745E7FC00A398FE /* AllTrailsFoodUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CDA410A82745E7F900A398FE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					CDA410AF2745E7F900A398FE = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+					CDA410C52745E7FC00A398FE = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = CDA410AF2745E7F900A398FE;
+					};
+					CDA410D02745E7FC00A398FE = {
+						CreatedOnToolsVersion = 12.5.1;
+						TestTargetID = CDA410AF2745E7F900A398FE;
+					};
+				};
+			};
+			buildConfigurationList = CDA410AB2745E7F900A398FE /* Build configuration list for PBXProject "AllTrailsFood" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CDA410A72745E7F900A398FE;
+			productRefGroup = CDA410B12745E7F900A398FE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CDA410AF2745E7F900A398FE /* AllTrailsFood */,
+				CDA410C52745E7FC00A398FE /* AllTrailsFoodTests */,
+				CDA410D02745E7FC00A398FE /* AllTrailsFoodUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CDA410AE2745E7F900A398FE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CDA410C02745E7FC00A398FE /* LaunchScreen.storyboard in Resources */,
+				CDA410BD2745E7FC00A398FE /* Assets.xcassets in Resources */,
+				CDA410BB2745E7F900A398FE /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CDA410C42745E7FC00A398FE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CDA410CF2745E7FC00A398FE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CDA410AC2745E7F900A398FE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CDA410B82745E7F900A398FE /* ViewController.swift in Sources */,
+				CDA410B42745E7F900A398FE /* AppDelegate.swift in Sources */,
+				CDA410B62745E7F900A398FE /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CDA410C22745E7FC00A398FE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CDA410CB2745E7FC00A398FE /* AllTrailsFoodTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CDA410CD2745E7FC00A398FE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CDA410D62745E7FC00A398FE /* AllTrailsFoodUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CDA410C82745E7FC00A398FE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CDA410AF2745E7F900A398FE /* AllTrailsFood */;
+			targetProxy = CDA410C72745E7FC00A398FE /* PBXContainerItemProxy */;
+		};
+		CDA410D32745E7FC00A398FE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CDA410AF2745E7F900A398FE /* AllTrailsFood */;
+			targetProxy = CDA410D22745E7FC00A398FE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CDA410B92745E7F900A398FE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CDA410BA2745E7F900A398FE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CDA410BE2745E7FC00A398FE /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CDA410BF2745E7FC00A398FE /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CDA410D82745E7FC00A398FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CDA410D92745E7FC00A398FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CDA410DB2745E7FC00A398FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = AllTrailsFood/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.sgpapps.AllTrailsFood;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CDA410DC2745E7FC00A398FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = AllTrailsFood/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.sgpapps.AllTrailsFood;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		CDA410DE2745E7FC00A398FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = AllTrailsFoodTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.sgpapps.AllTrailsFoodTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AllTrailsFood.app/AllTrailsFood";
+			};
+			name = Debug;
+		};
+		CDA410DF2745E7FC00A398FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = AllTrailsFoodTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.sgpapps.AllTrailsFoodTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AllTrailsFood.app/AllTrailsFood";
+			};
+			name = Release;
+		};
+		CDA410E12745E7FC00A398FE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = AllTrailsFoodUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.sgpapps.AllTrailsFoodUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = AllTrailsFood;
+			};
+			name = Debug;
+		};
+		CDA410E22745E7FC00A398FE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = AllTrailsFoodUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.sgpapps.AllTrailsFoodUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = AllTrailsFood;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CDA410AB2745E7F900A398FE /* Build configuration list for PBXProject "AllTrailsFood" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CDA410D82745E7FC00A398FE /* Debug */,
+				CDA410D92745E7FC00A398FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CDA410DA2745E7FC00A398FE /* Build configuration list for PBXNativeTarget "AllTrailsFood" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CDA410DB2745E7FC00A398FE /* Debug */,
+				CDA410DC2745E7FC00A398FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CDA410DD2745E7FC00A398FE /* Build configuration list for PBXNativeTarget "AllTrailsFoodTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CDA410DE2745E7FC00A398FE /* Debug */,
+				CDA410DF2745E7FC00A398FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CDA410E02745E7FC00A398FE /* Build configuration list for PBXNativeTarget "AllTrailsFoodUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CDA410E12745E7FC00A398FE /* Debug */,
+				CDA410E22745E7FC00A398FE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CDA410A82745E7F900A398FE /* Project object */;
+}
