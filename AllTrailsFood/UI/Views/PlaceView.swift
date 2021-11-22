@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 final class PlaceView: UIView {
 
@@ -84,11 +85,9 @@ final class PlaceView: UIView {
         detailLabel.textColor = .gray
     }
 
-    private func attachmentImage(_ image: UIImage) -> NSAttributedString {
-        let attachment = NSTextAttachment()
-        attachment.image = image
-        attachment.bounds = CGRect(x: 0, y: 0, width: image.size.width, height: image.size.height)
-        return NSAttributedString(attachment: attachment)
+    func prepareForReuse() {
+        photoImageView.sd_cancelCurrentImageLoad()
+        photoImageView.image = nil
     }
 
     func configure(with viewModel: PlaceViewModel) {
@@ -99,23 +98,15 @@ final class PlaceView: UIView {
         if let starImage = starImage, let starFillImage = starFillImage {
             let attributedString = NSMutableAttributedString()
             for _ in 0..<viewModel.rating {
-                attributedString.append(attachmentImage(starFillImage))
+                attributedString.append(NSAttributedString(image: starFillImage))
             }
             for _ in viewModel.rating..<5 {
-                attributedString.append(attachmentImage(starImage))
+                attributedString.append(NSAttributedString(image: starImage))
             }
             ratingLabel.attributedText = attributedString
         }
 
         guard let photoURL = viewModel.photoURL else { return }
-        // TODO: use SDWebImage
-        DispatchQueue.global().async {
-//            print("*** \(photoURL)")
-            if let data = try? Data( contentsOf: photoURL) {
-                DispatchQueue.main.async {
-                    self.photoImageView.image = UIImage( data:data)
-                }
-            }
-        }
+        photoImageView.sd_setImage(with: photoURL)
     }
 }

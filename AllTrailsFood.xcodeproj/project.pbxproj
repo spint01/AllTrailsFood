@@ -3,10 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CD06337D274B5C2900F2A0A7 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = CD06337C274B5C2900F2A0A7 /* SDWebImage */; };
+		CD06337F274B5E6600F2A0A7 /* NSAttributedString+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD06337E274B5E6600F2A0A7 /* NSAttributedString+extension.swift */; };
+		CD063382274B636900F2A0A7 /* MapKit+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD063381274B636900F2A0A7 /* MapKit+extension.swift */; };
 		CDA410B42745E7F900A398FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA410B32745E7F900A398FE /* AppDelegate.swift */; };
 		CDA410B62745E7F900A398FE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA410B52745E7F900A398FE /* SceneDelegate.swift */; };
 		CDA410B82745E7F900A398FE /* MainContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA410B72745E7F900A398FE /* MainContainerViewController.swift */; };
@@ -59,6 +62,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CD06337E274B5E6600F2A0A7 /* NSAttributedString+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+extension.swift"; sourceTree = "<group>"; };
+		CD063381274B636900F2A0A7 /* MapKit+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapKit+extension.swift"; sourceTree = "<group>"; };
 		CDA410B02745E7F900A398FE /* AllTrailsFood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AllTrailsFood.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDA410B32745E7F900A398FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CDA410B52745E7F900A398FE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -104,6 +109,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD06337D274B5C2900F2A0A7 /* SDWebImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -224,6 +230,8 @@
 		CDA4111D2746B05F00A398FE /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				CD063381274B636900F2A0A7 /* MapKit+extension.swift */,
+				CD06337E274B5E6600F2A0A7 /* NSAttributedString+extension.swift */,
 				CDA4112E2748764B00A398FE /* UIButton+extension.swift */,
 				CDA411282747721E00A398FE /* UICollectionView+extension.swift */,
 				CDA4111E2746B08700A398FE /* UIColor+extension.swift */,
@@ -248,10 +256,10 @@
 		CDA4113127495D4D00A398FE /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				CDA4113A274AA02F00A398FE /* Place+extension.swift */,
+				CDA411362749636500A398FE /* PlaceAnnotation.swift */,
 				CDA4112C2747F90300A398FE /* PlacesSearchHandler.swift */,
 				CDA4113227495D9A00A398FE /* PlaceViewModel.swift */,
-				CDA411362749636500A398FE /* PlaceAnnotation.swift */,
-				CDA4113A274AA02F00A398FE /* Place+extension.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -272,6 +280,9 @@
 			dependencies = (
 			);
 			name = AllTrailsFood;
+			packageProductDependencies = (
+				CD06337C274B5C2900F2A0A7 /* SDWebImage */,
+			);
 			productName = AllTrailsFood;
 			productReference = CDA410B02745E7F900A398FE /* AllTrailsFood.app */;
 			productType = "com.apple.product-type.application";
@@ -343,6 +354,9 @@
 				Base,
 			);
 			mainGroup = CDA410A72745E7F900A398FE;
+			packageReferences = (
+				CD06337B274B5C2900F2A0A7 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+			);
 			productRefGroup = CDA410B12745E7F900A398FE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -398,6 +412,7 @@
 				CDA410F52745F14800A398FE /* WebService.swift in Sources */,
 				CDA410B82745E7F900A398FE /* MainContainerViewController.swift in Sources */,
 				CDA4113927496FE500A398FE /* PlaceView.swift in Sources */,
+				CD06337F274B5E6600F2A0A7 /* NSAttributedString+extension.swift in Sources */,
 				CDA4111F2746B08700A398FE /* UIColor+extension.swift in Sources */,
 				CDA410B42745E7F900A398FE /* AppDelegate.swift in Sources */,
 				CDA410FF2746008D00A398FE /* MapViewController.swift in Sources */,
@@ -405,6 +420,7 @@
 				CDA410FB2745F35700A398FE /* GooglePlaceEnvironment.swift in Sources */,
 				CDA4111C2746AFEB00A398FE /* OverlayView.swift in Sources */,
 				CDA4113327495D9A00A398FE /* PlaceViewModel.swift in Sources */,
+				CD063382274B636900F2A0A7 /* MapKit+extension.swift in Sources */,
 				CDA410F32745F14800A398FE /* Resource.swift in Sources */,
 				CDA4111A2746AFD400A398FE /* SearchView.swift in Sources */,
 				CDA410FD2745FAA400A398FE /* Place.swift in Sources */,
@@ -731,6 +747,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CD06337B274B5C2900F2A0A7 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.12.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CD06337C274B5C2900F2A0A7 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CD06337B274B5C2900F2A0A7 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CDA410A82745E7F900A398FE /* Project object */;
 }

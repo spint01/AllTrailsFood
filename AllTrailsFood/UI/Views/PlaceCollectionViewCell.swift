@@ -29,8 +29,7 @@ final class PlaceCollectionViewCell: UICollectionViewCell {
 
     override func prepareForReuse() {
         super.prepareForReuse()
-        // TODO:
-//        placeView.photoImageView.image = nil
+        placeView.prepareForReuse()
     }
 
     private func commonInit() {
@@ -71,13 +70,6 @@ final class PlaceCollectionViewCell: UICollectionViewCell {
             isFavorite = true
         }
         favoriteButton.setImage(UIImage(systemName: isFavorite ? "heart.fill" : "heart"), for: .normal)
-    }
-
-    private func attachmentImage(_ image: UIImage) -> NSAttributedString {
-        let attachment = NSTextAttachment()
-        attachment.image = image
-        attachment.bounds = CGRect(x: 0, y: 0, width: image.size.width, height: image.size.height)
-        return NSAttributedString(attachment: attachment)
     }
 
     func configure(with viewModel: PlaceViewModel) {

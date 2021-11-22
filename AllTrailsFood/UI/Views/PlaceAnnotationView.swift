@@ -14,13 +14,6 @@ final class PlaceAnnotationView: MKAnnotationView {
         static let horizontalPadding: CGFloat = 8
         static let verticalPadding: CGFloat = 8
     }
-    static let identifier = "PlaceAnnotationView"
-
-    override var annotation: MKAnnotation? {
-        willSet {
-            newValue.flatMap(configure(with:))
-        }
-    }
 
     override init(annotation: MKAnnotation?, reuseIdentifier: String?) {
         super.init(annotation: annotation, reuseIdentifier: reuseIdentifier)
@@ -51,9 +44,9 @@ final class PlaceAnnotationView: MKAnnotationView {
 
         guard let id = annotation.viewModel.place.id else { return }
         if MainContainerViewController.favoritePlaces.contains(id) {
-            image = UIImage(systemName: "drop.fill")
+            image = UIImage(systemName: "heart.fill")
         } else {
-            image = UIImage(systemName: "drop")
+            image = UIImage(systemName: "drop.fill")
         }
     }
 }

@@ -176,6 +176,8 @@ final class MainContainerViewController: UIViewController {
 
             titleView.addSubview(imageView)
         }
+        titleView.sizeToFit()
+        
         return titleView
     }
 

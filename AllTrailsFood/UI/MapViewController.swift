@@ -45,8 +45,8 @@ final class MapViewController: UIViewController {
         mapView.insertAndPinToParentView(view)
         mapView.showsCompass = false  // Hide built-in compass
         mapView.delegate = self
-        
-        mapView.register(PlaceAnnotationView.self, forAnnotationViewWithReuseIdentifier: PlaceAnnotationView.identifier)
+
+        mapView.registerAnnotationClass(PlaceAnnotationView.self)
     }
 
     private func centerCoordinateOnMap(coordinate: CLLocationCoordinate2D) {
@@ -74,9 +74,8 @@ final class MapViewController: UIViewController {
 
 extension MapViewController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-        if let annotation = annotation as? PlaceAnnotation {
-            return mapView.dequeueReusableAnnotationView(withIdentifier: PlaceAnnotationView.identifier, for: annotation) as? PlaceAnnotationView
-        }
-        return nil
+        let view: PlaceAnnotationView = mapView.dequeueReusableView(for: annotation)
+        view.configure(with: annotation)
+        return view
     }
 }
