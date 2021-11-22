@@ -9,12 +9,36 @@
 /* Begin PBXBuildFile section */
 		CDA410B42745E7F900A398FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA410B32745E7F900A398FE /* AppDelegate.swift */; };
 		CDA410B62745E7F900A398FE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA410B52745E7F900A398FE /* SceneDelegate.swift */; };
-		CDA410B82745E7F900A398FE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA410B72745E7F900A398FE /* ViewController.swift */; };
-		CDA410BB2745E7F900A398FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDA410B92745E7F900A398FE /* Main.storyboard */; };
+		CDA410B82745E7F900A398FE /* MainContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA410B72745E7F900A398FE /* MainContainerViewController.swift */; };
 		CDA410BD2745E7FC00A398FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDA410BC2745E7FC00A398FE /* Assets.xcassets */; };
 		CDA410C02745E7FC00A398FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDA410BE2745E7FC00A398FE /* LaunchScreen.storyboard */; };
 		CDA410CB2745E7FC00A398FE /* AllTrailsFoodTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA410CA2745E7FC00A398FE /* AllTrailsFoodTests.swift */; };
 		CDA410D62745E7FC00A398FE /* AllTrailsFoodUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA410D52745E7FC00A398FE /* AllTrailsFoodUITests.swift */; };
+		CDA410ED2745EFF000A398FE /* GoogleService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA410EC2745EFF000A398FE /* GoogleService.swift */; };
+		CDA410F32745F14800A398FE /* Resource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA410EE2745F14800A398FE /* Resource.swift */; };
+		CDA410F42745F14800A398FE /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA410EF2745F14800A398FE /* Result.swift */; };
+		CDA410F52745F14800A398FE /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA410F02745F14800A398FE /* WebService.swift */; };
+		CDA410F62745F14800A398FE /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA410F12745F14800A398FE /* Response.swift */; };
+		CDA410F92745F1EC00A398FE /* GooglePlacesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA410F82745F1EC00A398FE /* GooglePlacesService.swift */; };
+		CDA410FB2745F35700A398FE /* GooglePlaceEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA410FA2745F35700A398FE /* GooglePlaceEnvironment.swift */; };
+		CDA410FD2745FAA400A398FE /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA410FC2745FAA400A398FE /* Place.swift */; };
+		CDA410FF2746008D00A398FE /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA410FE2746008D00A398FE /* MapViewController.swift */; };
+		CDA411012746009E00A398FE /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA411002746009E00A398FE /* ListViewController.swift */; };
+		CDA41103274600B000A398FE /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA41102274600B000A398FE /* DetailViewController.swift */; };
+		CDA4111A2746AFD400A398FE /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA411192746AFD400A398FE /* SearchView.swift */; };
+		CDA4111C2746AFEB00A398FE /* OverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA4111B2746AFEB00A398FE /* OverlayView.swift */; };
+		CDA4111F2746B08700A398FE /* UIColor+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA4111E2746B08700A398FE /* UIColor+extension.swift */; };
+		CDA411212746B0C900A398FE /* UIViewController+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA411202746B0C900A398FE /* UIViewController+extension.swift */; };
+		CDA411232746B0DB00A398FE /* UIView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA411222746B0DB00A398FE /* UIView+extension.swift */; };
+		CDA411252746BCBF00A398FE /* PlaceCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA411242746BCBF00A398FE /* PlaceCollectionViewCell.swift */; };
+		CDA411292747721E00A398FE /* UICollectionView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA411282747721E00A398FE /* UICollectionView+extension.swift */; };
+		CDA4112D2747F90300A398FE /* PlacesSearchHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA4112C2747F90300A398FE /* PlacesSearchHandler.swift */; };
+		CDA4112F2748764B00A398FE /* UIButton+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA4112E2748764B00A398FE /* UIButton+extension.swift */; };
+		CDA4113327495D9A00A398FE /* PlaceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA4113227495D9A00A398FE /* PlaceViewModel.swift */; };
+		CDA41135274961B000A398FE /* PlaceAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA41134274961B000A398FE /* PlaceAnnotationView.swift */; };
+		CDA411372749636500A398FE /* PlaceAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA411362749636500A398FE /* PlaceAnnotation.swift */; };
+		CDA4113927496FE500A398FE /* PlaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA4113827496FE500A398FE /* PlaceView.swift */; };
+		CDA4113B274AA02F00A398FE /* Place+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA4113A274AA02F00A398FE /* Place+extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,8 +62,7 @@
 		CDA410B02745E7F900A398FE /* AllTrailsFood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AllTrailsFood.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDA410B32745E7F900A398FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CDA410B52745E7F900A398FE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CDA410B72745E7F900A398FE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		CDA410BA2745E7F900A398FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CDA410B72745E7F900A398FE /* MainContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainContainerViewController.swift; sourceTree = "<group>"; };
 		CDA410BC2745E7FC00A398FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CDA410BF2745E7FC00A398FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CDA410C12745E7FC00A398FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +72,31 @@
 		CDA410D12745E7FC00A398FE /* AllTrailsFoodUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AllTrailsFoodUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDA410D52745E7FC00A398FE /* AllTrailsFoodUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllTrailsFoodUITests.swift; sourceTree = "<group>"; };
 		CDA410D72745E7FC00A398FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CDA410EC2745EFF000A398FE /* GoogleService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleService.swift; sourceTree = "<group>"; };
+		CDA410EE2745F14800A398FE /* Resource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Resource.swift; sourceTree = "<group>"; };
+		CDA410EF2745F14800A398FE /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		CDA410F02745F14800A398FE /* WebService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
+		CDA410F12745F14800A398FE /* Response.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		CDA410F82745F1EC00A398FE /* GooglePlacesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GooglePlacesService.swift; sourceTree = "<group>"; };
+		CDA410FA2745F35700A398FE /* GooglePlaceEnvironment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GooglePlaceEnvironment.swift; sourceTree = "<group>"; };
+		CDA410FC2745FAA400A398FE /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
+		CDA410FE2746008D00A398FE /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		CDA411002746009E00A398FE /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		CDA41102274600B000A398FE /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		CDA411192746AFD400A398FE /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		CDA4111B2746AFEB00A398FE /* OverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayView.swift; sourceTree = "<group>"; };
+		CDA4111E2746B08700A398FE /* UIColor+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+extension.swift"; sourceTree = "<group>"; };
+		CDA411202746B0C900A398FE /* UIViewController+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+extension.swift"; sourceTree = "<group>"; };
+		CDA411222746B0DB00A398FE /* UIView+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+extension.swift"; sourceTree = "<group>"; };
+		CDA411242746BCBF00A398FE /* PlaceCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceCollectionViewCell.swift; sourceTree = "<group>"; };
+		CDA411282747721E00A398FE /* UICollectionView+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+extension.swift"; sourceTree = "<group>"; };
+		CDA4112C2747F90300A398FE /* PlacesSearchHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesSearchHandler.swift; sourceTree = "<group>"; };
+		CDA4112E2748764B00A398FE /* UIButton+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+extension.swift"; sourceTree = "<group>"; };
+		CDA4113227495D9A00A398FE /* PlaceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceViewModel.swift; sourceTree = "<group>"; };
+		CDA41134274961B000A398FE /* PlaceAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceAnnotationView.swift; sourceTree = "<group>"; };
+		CDA411362749636500A398FE /* PlaceAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceAnnotation.swift; sourceTree = "<group>"; };
+		CDA4113827496FE500A398FE /* PlaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceView.swift; sourceTree = "<group>"; };
+		CDA4113A274AA02F00A398FE /* Place+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Place+extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,10 +147,11 @@
 		CDA410B22745E7F900A398FE /* AllTrailsFood */ = {
 			isa = PBXGroup;
 			children = (
+				CDA410E32745E92E00A398FE /* UI */,
+				CDA410E42745E93B00A398FE /* Data */,
+				CDA4111D2746B05F00A398FE /* Common */,
 				CDA410B32745E7F900A398FE /* AppDelegate.swift */,
 				CDA410B52745E7F900A398FE /* SceneDelegate.swift */,
-				CDA410B72745E7F900A398FE /* ViewController.swift */,
-				CDA410B92745E7F900A398FE /* Main.storyboard */,
 				CDA410BC2745E7FC00A398FE /* Assets.xcassets */,
 				CDA410BE2745E7FC00A398FE /* LaunchScreen.storyboard */,
 				CDA410C12745E7FC00A398FE /* Info.plist */,
@@ -126,6 +175,85 @@
 				CDA410D72745E7FC00A398FE /* Info.plist */,
 			);
 			path = AllTrailsFoodUITests;
+			sourceTree = "<group>";
+		};
+		CDA410E32745E92E00A398FE /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				CDA4113127495D4D00A398FE /* Common */,
+				CDA4113027495D3800A398FE /* Views */,
+				CDA410B72745E7F900A398FE /* MainContainerViewController.swift */,
+				CDA411002746009E00A398FE /* ListViewController.swift */,
+				CDA410FE2746008D00A398FE /* MapViewController.swift */,
+				CDA41102274600B000A398FE /* DetailViewController.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		CDA410E42745E93B00A398FE /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				CDA410EB2745EF8F00A398FE /* GoogleService */,
+				CDA410E52745E95C00A398FE /* WebService */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		CDA410E52745E95C00A398FE /* WebService */ = {
+			isa = PBXGroup;
+			children = (
+				CDA410EE2745F14800A398FE /* Resource.swift */,
+				CDA410F12745F14800A398FE /* Response.swift */,
+				CDA410EF2745F14800A398FE /* Result.swift */,
+				CDA410F02745F14800A398FE /* WebService.swift */,
+			);
+			path = WebService;
+			sourceTree = "<group>";
+		};
+		CDA410EB2745EF8F00A398FE /* GoogleService */ = {
+			isa = PBXGroup;
+			children = (
+				CDA410EC2745EFF000A398FE /* GoogleService.swift */,
+				CDA410FA2745F35700A398FE /* GooglePlaceEnvironment.swift */,
+				CDA410F82745F1EC00A398FE /* GooglePlacesService.swift */,
+				CDA410FC2745FAA400A398FE /* Place.swift */,
+			);
+			path = GoogleService;
+			sourceTree = "<group>";
+		};
+		CDA4111D2746B05F00A398FE /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				CDA4112E2748764B00A398FE /* UIButton+extension.swift */,
+				CDA411282747721E00A398FE /* UICollectionView+extension.swift */,
+				CDA4111E2746B08700A398FE /* UIColor+extension.swift */,
+				CDA411222746B0DB00A398FE /* UIView+extension.swift */,
+				CDA411202746B0C900A398FE /* UIViewController+extension.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		CDA4113027495D3800A398FE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CDA4111B2746AFEB00A398FE /* OverlayView.swift */,
+				CDA41134274961B000A398FE /* PlaceAnnotationView.swift */,
+				CDA411242746BCBF00A398FE /* PlaceCollectionViewCell.swift */,
+				CDA4113827496FE500A398FE /* PlaceView.swift */,
+				CDA411192746AFD400A398FE /* SearchView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CDA4113127495D4D00A398FE /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				CDA4112C2747F90300A398FE /* PlacesSearchHandler.swift */,
+				CDA4113227495D9A00A398FE /* PlaceViewModel.swift */,
+				CDA411362749636500A398FE /* PlaceAnnotation.swift */,
+				CDA4113A274AA02F00A398FE /* Place+extension.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,7 +361,6 @@
 			files = (
 				CDA410C02745E7FC00A398FE /* LaunchScreen.storyboard in Resources */,
 				CDA410BD2745E7FC00A398FE /* Assets.xcassets in Resources */,
-				CDA410BB2745E7F900A398FE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,9 +385,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CDA410B82745E7F900A398FE /* ViewController.swift in Sources */,
+				CDA410F62745F14800A398FE /* Response.swift in Sources */,
+				CDA410F92745F1EC00A398FE /* GooglePlacesService.swift in Sources */,
+				CDA411212746B0C900A398FE /* UIViewController+extension.swift in Sources */,
+				CDA41135274961B000A398FE /* PlaceAnnotationView.swift in Sources */,
+				CDA411372749636500A398FE /* PlaceAnnotation.swift in Sources */,
+				CDA410F42745F14800A398FE /* Result.swift in Sources */,
+				CDA411292747721E00A398FE /* UICollectionView+extension.swift in Sources */,
+				CDA4112F2748764B00A398FE /* UIButton+extension.swift in Sources */,
+				CDA4112D2747F90300A398FE /* PlacesSearchHandler.swift in Sources */,
+				CDA410ED2745EFF000A398FE /* GoogleService.swift in Sources */,
+				CDA410F52745F14800A398FE /* WebService.swift in Sources */,
+				CDA410B82745E7F900A398FE /* MainContainerViewController.swift in Sources */,
+				CDA4113927496FE500A398FE /* PlaceView.swift in Sources */,
+				CDA4111F2746B08700A398FE /* UIColor+extension.swift in Sources */,
 				CDA410B42745E7F900A398FE /* AppDelegate.swift in Sources */,
+				CDA410FF2746008D00A398FE /* MapViewController.swift in Sources */,
+				CDA411232746B0DB00A398FE /* UIView+extension.swift in Sources */,
+				CDA410FB2745F35700A398FE /* GooglePlaceEnvironment.swift in Sources */,
+				CDA4111C2746AFEB00A398FE /* OverlayView.swift in Sources */,
+				CDA4113327495D9A00A398FE /* PlaceViewModel.swift in Sources */,
+				CDA410F32745F14800A398FE /* Resource.swift in Sources */,
+				CDA4111A2746AFD400A398FE /* SearchView.swift in Sources */,
+				CDA410FD2745FAA400A398FE /* Place.swift in Sources */,
+				CDA411252746BCBF00A398FE /* PlaceCollectionViewCell.swift in Sources */,
+				CDA411012746009E00A398FE /* ListViewController.swift in Sources */,
+				CDA4113B274AA02F00A398FE /* Place+extension.swift in Sources */,
 				CDA410B62745E7F900A398FE /* SceneDelegate.swift in Sources */,
+				CDA41103274600B000A398FE /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,14 +448,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		CDA410B92745E7F900A398FE /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CDA410BA2745E7F900A398FE /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		CDA410BE2745E7FC00A398FE /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
