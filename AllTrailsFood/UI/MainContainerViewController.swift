@@ -29,6 +29,10 @@ enum ViewType {
 
 final class MainContainerViewController: UIViewController {
 
+    enum Constant {
+        static let overlayVerticalPadding: CGFloat = 30
+    }
+
     static var favoritePlaces: Set<String> = []
 
     private let contentView: UIView = .init()
@@ -48,6 +52,7 @@ final class MainContainerViewController: UIViewController {
             }
         }
     }
+    private var overlayBottomConstraint: NSLayoutConstraint?
     private var manager: CLLocationManager?
     private var coordinate: CLLocationCoordinate2D? {
         didSet {
@@ -79,6 +84,9 @@ final class MainContainerViewController: UIViewController {
         displayListController()
         overlayView.configure(with: viewType)
         searchLocation()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
 
     // MARK: setup
@@ -104,11 +112,12 @@ final class MainContainerViewController: UIViewController {
     private func setupOverlayView() {
         overlayView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(overlayView)
+        overlayBottomConstraint = overlayView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -Constant.overlayVerticalPadding)
         NSLayoutConstraint.activate([
             overlayView.heightAnchor.constraint(equalToConstant: 44.0),
             overlayView.widthAnchor.constraint(equalToConstant: 90.0),
             overlayView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            overlayView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -30),
+            overlayBottomConstraint!,
         ])
         overlayView.delegate = self
     }
@@ -195,6 +204,32 @@ final class MainContainerViewController: UIViewController {
     private func authStatusChanged(status: CLAuthorizationStatus) {
         if status == .authorizedWhenInUse || status == .authorizedAlways {
             manager?.startUpdatingLocation()
+        }
+    }
+
+    // MARK: keyboard show/hide
+
+    @objc func keyboardWillShow(_ notification: NSNotification) {
+        layoutWithKeyboardFrame(notification)
+    }
+
+    @objc func keyboardWillHide(_ notification: NSNotification) {
+        layoutWithKeyboardFrame(notification)
+    }
+
+    func layoutWithKeyboardFrame(_ notification: NSNotification) {
+        guard isViewLoaded,
+              let info = notification.userInfo,
+              let keyboardValue = info[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue  else { return }
+
+        let keyboardScreenEndFrame = keyboardValue.cgRectValue
+        let keyboardViewEndFrame = view.convert(keyboardScreenEndFrame, from: view.window)
+
+        let padding: CGFloat = Constant.overlayVerticalPadding
+        if notification.name == UIResponder.keyboardWillHideNotification {
+            self.overlayBottomConstraint?.constant = -padding
+        } else {
+            self.overlayBottomConstraint?.constant = -(keyboardViewEndFrame.height + padding)
         }
     }
 }

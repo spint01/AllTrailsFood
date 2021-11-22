@@ -53,6 +53,8 @@ final class ListViewController: UIViewController {
         super.viewDidLoad()
 
         setupUI()
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
 
     // MARK: setup
@@ -120,6 +122,31 @@ final class ListViewController: UIViewController {
         guard let data = placeData else { return [] }
 
         return data.compactMap { RowItem(itemType: .place($0), identifier: $0.id) }
+    }
+
+    // MARK: keyboard show/hide
+
+    @objc func keyboardWillShow(_ notification: NSNotification) {
+        layoutWithKeyboardFrame(notification)
+    }
+
+    @objc func keyboardWillHide(_ notification: NSNotification) {
+        layoutWithKeyboardFrame(notification)
+    }
+
+    func layoutWithKeyboardFrame(_ notification: NSNotification) {
+        guard isViewLoaded,
+              let keyboardValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue,
+              let collectionView = collectionView else { return }
+
+        let keyboardScreenEndFrame = keyboardValue.cgRectValue
+        let keyboardViewEndFrame = view.convert(keyboardScreenEndFrame, from: view.window)
+
+        if notification.name == UIResponder.keyboardWillHideNotification {
+            collectionView.contentInset = .zero
+        } else {
+            collectionView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: keyboardViewEndFrame.height - view.safeAreaInsets.bottom, right: 0)
+        }
     }
 }
 
