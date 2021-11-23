@@ -8,10 +8,10 @@
 import UIKit
 
 extension NSAttributedString {
-    convenience init(image: UIImage) {
+    convenience init(image: UIImage, offset: CGPoint = .zero) {
         let attachment = NSTextAttachment()
         attachment.image = image
-        attachment.bounds = CGRect(x: 0, y: 0, width: image.size.width, height: image.size.height)
+        attachment.bounds = CGRect(x: offset.x, y: offset.y, width: image.size.width, height: image.size.height)
         self.init(attachment: attachment)
     }
 }

@@ -44,9 +44,9 @@ final class PlaceAnnotationView: MKAnnotationView {
 
         guard let id = annotation.viewModel.place.id else { return }
         if MainContainerViewController.favoritePlaces.contains(id) {
-            image = UIImage(systemName: "heart.fill")
+            image = UIImage(named: "map-pin-favorite")
         } else {
-            image = UIImage(systemName: "drop.fill")
+            image = UIImage(named: "map-pin")
         }
     }
 }

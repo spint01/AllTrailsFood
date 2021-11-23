@@ -8,7 +8,7 @@
 import Foundation
 import CoreLocation
 
-protocol PlaceModel {
+protocol PlaceModelDisplayable {
     var name: String { get }
     var photoURL: URL? { get }
     var rating: Int { get }
@@ -18,11 +18,8 @@ protocol PlaceModel {
     var locationCoordinate: CLLocationCoordinate2D? { get }
 }
 
-struct PlaceViewModel {
+struct PlaceViewModel: PlaceModelDisplayable {
     let place: Place
-}
-
-extension PlaceViewModel: PlaceModel {
     var detail: String {
         return ""
     }

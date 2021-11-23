@@ -21,15 +21,15 @@ enum ViewType {
     }
     var overlayImage: UIImage? {
         switch self {
-        case .list: return UIImage(systemName: "list.bullet")?.withTintColor(.white, renderingMode: .alwaysOriginal)
-        case .map: return UIImage(systemName: "map")?.withTintColor(.white, renderingMode: .alwaysOriginal)
+        case .list: return UIImage(systemName: "map")?.withTintColor(.white, renderingMode: .alwaysOriginal)
+        case .map: return UIImage(systemName: "list.bullet")?.withTintColor(.white, renderingMode: .alwaysOriginal)
         }
     }
 }
 
 final class MainContainerViewController: UIViewController {
 
-    enum Constant {
+    private enum Constant {
         static let overlayVerticalPadding: CGFloat = 30
     }
 
@@ -63,7 +63,6 @@ final class MainContainerViewController: UIViewController {
                 let text = "\(coordinate.latitude),\(coordinate.longitude)"
                 let searchQuery = PlacesSearchHandler(queryText: "restaurants", locationText: text)
                 searchQuery.performQuery { [weak self] places, error in
-                    print("*** finished query: \(text) places count: \(places?.count ?? 0)")
                     self?.placeData = places
                 }
             }
@@ -75,9 +74,6 @@ final class MainContainerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        navigationController?.navigationBar.isTranslucent = false
-        navigationController?.navigationBar.shadowImage = UIImage()
-        navigationItem.titleView = navigationItemView(imageName: "logo-with-name", titleText: " at Lunch")
         view.backgroundColor = .atGray
         setupUI()
 
@@ -92,16 +88,34 @@ final class MainContainerViewController: UIViewController {
     // MARK: setup
 
     private func setupUI() {
+        setupNavigationBar()
         setupSearchView()
         setupOverlayView()
         setupContentView()
+    }
+
+    private func setupNavigationBar() {
+        navigationController?.navigationBar.isTranslucent = false
+        navigationController?.navigationBar.shadowImage = UIImage()
+
+        let label = UILabel()
+
+        let attributedString = NSMutableAttributedString()
+        if let image = UIImage(named: "logo-with-name") {
+            attributedString.append(NSAttributedString(image: image, offset: CGPoint(x: 0, y: -5)))
+        }
+        attributedString.append(NSAttributedString(string: " at Lunch", attributes: [.font: UIFont.systemFont(ofSize: 24.0, weight: .ultraLight), .foregroundColor: UIColor.gray]))
+        label.attributedText = attributedString
+        label.sizeToFit()
+
+        navigationItem.titleView = label
     }
 
     private func setupSearchView() {
         searchView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(searchView)
         NSLayoutConstraint.activate([
-            searchView.heightAnchor.constraint(equalToConstant: 70.0),
+            searchView.heightAnchor.constraint(equalToConstant: 50.0),
             searchView.topAnchor.constraint(equalTo: view.topAnchor),
             searchView.leftAnchor.constraint(equalTo: view.leftAnchor),
             searchView.rightAnchor.constraint(equalTo: view.rightAnchor),
@@ -147,8 +161,8 @@ final class MainContainerViewController: UIViewController {
             mapViewController = MapViewController()
         }
         swapViewControllers(mapViewController)
-        mapViewController?.placeData = placeData
         mapViewController?.coordinate = coordinate
+        mapViewController?.placeData = placeData
     }
 
     // MARK: Helper methods
@@ -162,32 +176,6 @@ final class MainContainerViewController: UIViewController {
         addChildController(newController, toView: contentView)
         view.bringSubviewToFront(searchView)
         view.bringSubviewToFront(overlayView)
-    }
-
-    func navigationItemView(imageName: String, titleText: String) -> UIView {
-        // Creates a new UIView
-        let titleView = UIView()
-
-        let label = UILabel()
-        label.text = " \(titleText)"
-        label.font = UIFont.systemFont(ofSize: 24.0, weight: .ultraLight)
-        label.textColor = .gray
-        label.sizeToFit()
-        titleView.addSubview(label)
-
-        if let image = UIImage(named: imageName) {
-            // Maintains the image's aspect ratio:
-            let imageAspect = image.size.width / image.size.height
-            let imageX = label.frame.origin.x - label.frame.size.height * imageAspect
-            let imageView = UIImageView(image: image)
-            imageView.frame = CGRect(x: imageX, y: label.frame.origin.y, width: label.frame.size.height * imageAspect, height: label.frame.size.height)
-            imageView.contentMode = UIView.ContentMode.scaleAspectFit
-
-            titleView.addSubview(imageView)
-        }
-        titleView.sizeToFit()
-        
-        return titleView
     }
 
     // MARK: location handling
@@ -274,11 +262,7 @@ extension MainContainerViewController: SearchViewDelegate {
 
     func searchTextChanged(_ text: String) {
         guard text.count > 3 else { return }
-        var locationText: String?
-        if let coordinate = coordinate {
-            locationText = "\(coordinate.latitude),\(coordinate.longitude)"
-        }
-        let searchQuery = PlacesSearchHandler(queryText: text, locationText: locationText)
+        let searchQuery = PlacesSearchHandler(queryText: text, locationText: nil)
         searchQuery.performQuery { places, error in
             self.placeData = places
         }

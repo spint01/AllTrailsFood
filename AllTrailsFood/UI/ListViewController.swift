@@ -13,7 +13,7 @@ final class ListViewController: UIViewController {
     typealias PlaceSnapshot = NSDiffableDataSourceSnapshot<PlaceSection, RowItem>
 
     enum PlaceSection {
-        case business
+        case restaurants
     }
 
     enum RowItemType {
@@ -114,7 +114,7 @@ final class ListViewController: UIViewController {
         defer {
             dataSource?.apply(snapshot, animatingDifferences: true)
         }
-        snapshot.appendSections([.business])
+        snapshot.appendSections([.restaurants])
         snapshot.appendItems(buildRows())
     }
 

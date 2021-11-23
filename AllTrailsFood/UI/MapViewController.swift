@@ -18,7 +18,6 @@ final class MapViewController: UIViewController {
             }
         }
     }
-
     var placeData: [Place]? {
         didSet {
             updateMapContent()

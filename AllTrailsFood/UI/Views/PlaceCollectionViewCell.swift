@@ -30,6 +30,7 @@ final class PlaceCollectionViewCell: UICollectionViewCell {
     override func prepareForReuse() {
         super.prepareForReuse()
         placeView.prepareForReuse()
+        favoriteButton.setImage(UIImage(systemName: "heart"), for: .normal)
     }
 
     private func commonInit() {
@@ -61,19 +62,24 @@ final class PlaceCollectionViewCell: UICollectionViewCell {
     }
 
     @objc private func favoriteButtonTapped() {
-        guard let place = place, let id = place.id else { return }
-        var isFavorite = false
+        guard let id = place?.id else { return }
         if MainContainerViewController.favoritePlaces.contains(id) {
             MainContainerViewController.favoritePlaces.remove(id)
         } else {
             MainContainerViewController.favoritePlaces.insert(id)
-            isFavorite = true
         }
+        updateFavorite(id)
+    }
+
+    private func updateFavorite(_ id: String) {
+        let isFavorite = MainContainerViewController.favoritePlaces.contains(id)
         favoriteButton.setImage(UIImage(systemName: isFavorite ? "heart.fill" : "heart"), for: .normal)
     }
 
     func configure(with viewModel: PlaceViewModel) {
         place = viewModel.place
         placeView.configure(with: viewModel)
+        guard let id = place?.id else { return }
+        updateFavorite(id)
     }
 }
