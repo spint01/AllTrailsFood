@@ -20,6 +20,7 @@ final class SearchView: UIView {
 
     private let filterButton: UIButton = UIButton(type: .system)
     private let searchBar: UISearchBar = .init()
+    private var isTesting3: Bool = false // third commit
 
     weak var delegate: SearchViewDelegate?
 
