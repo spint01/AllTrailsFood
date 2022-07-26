@@ -22,7 +22,6 @@ final class PlaceView: UIView {
     private var starImage: UIImage? = UIImage(systemName: "star.fill")?.withTintColor(.lightGray, renderingMode: .alwaysTemplate)
     private var isTesting: Bool = false
     private var isTesting2: Bool = false // second commit
-    private var isTesting3: Bool = false // third commit
 
     override init(frame: CGRect) {
         super.init(frame: frame)
