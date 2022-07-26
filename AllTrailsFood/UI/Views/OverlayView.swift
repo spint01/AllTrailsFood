@@ -13,6 +13,7 @@ protocol OverlayViewDelegate: AnyObject {
 
 final class OverlayView: UIView {
     private let button: UIButton = UIButton(type: .system)
+    private var isTesting4: Bool = false // fourth commit
 
     weak var delegate: OverlayViewDelegate?
 
