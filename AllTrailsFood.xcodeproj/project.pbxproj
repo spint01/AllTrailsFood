@@ -42,6 +42,7 @@
 		CDA411372749636500A398FE /* PlaceAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA411362749636500A398FE /* PlaceAnnotation.swift */; };
 		CDA4113927496FE500A398FE /* PlaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA4113827496FE500A398FE /* PlaceView.swift */; };
 		CDA4113B274AA02F00A398FE /* Place+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDA4113A274AA02F00A398FE /* Place+extension.swift */; };
+		CDCE743C288F6EB0000B2CC4 /* UIView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDCE743B288F6EB0000B2CC4 /* UIView+extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +103,7 @@
 		CDA411362749636500A398FE /* PlaceAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceAnnotation.swift; sourceTree = "<group>"; };
 		CDA4113827496FE500A398FE /* PlaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceView.swift; sourceTree = "<group>"; };
 		CDA4113A274AA02F00A398FE /* Place+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Place+extension.swift"; sourceTree = "<group>"; };
+		CDCE743B288F6EB0000B2CC4 /* UIView+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -260,6 +262,7 @@
 				CDA411362749636500A398FE /* PlaceAnnotation.swift */,
 				CDA4112C2747F90300A398FE /* PlacesSearchHandler.swift */,
 				CDA4113227495D9A00A398FE /* PlaceViewModel.swift */,
+				CDCE743B288F6EB0000B2CC4 /* UIView+extension.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -410,6 +413,7 @@
 				CDA4112D2747F90300A398FE /* PlacesSearchHandler.swift in Sources */,
 				CDA410ED2745EFF000A398FE /* GoogleService.swift in Sources */,
 				CDA410F52745F14800A398FE /* WebService.swift in Sources */,
+				CDCE743C288F6EB0000B2CC4 /* UIView+extension.swift in Sources */,
 				CDA410B82745E7F900A398FE /* MainContainerViewController.swift in Sources */,
 				CDA4113927496FE500A398FE /* PlaceView.swift in Sources */,
 				CD06337F274B5E6600F2A0A7 /* NSAttributedString+extension.swift in Sources */,

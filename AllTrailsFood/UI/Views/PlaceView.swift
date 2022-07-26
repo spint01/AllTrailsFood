@@ -20,6 +20,8 @@ final class PlaceView: UIView {
     private var isFavorite: Bool = false
     private var starFillImage: UIImage? = UIImage(systemName: "star.fill")
     private var starImage: UIImage? = UIImage(systemName: "star.fill")?.withTintColor(.lightGray, renderingMode: .alwaysTemplate)
+    private var isTesting: Bool = false
+    private var isTesting2: Bool = false // second commit
 
     override init(frame: CGRect) {
         super.init(frame: frame)
